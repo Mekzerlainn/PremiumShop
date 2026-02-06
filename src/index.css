@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Glass Navigation Effect */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.dark .glass-nav {
+  background: rgba(18, 18, 18, 0.85);
+}
+
+/* Glass Card Effect */
+.glass-card {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Hide Scrollbar */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Material Icons filled */
+.material-symbols-outlined.filled {
+  font-variation-settings: 'FILL' 1;
+}
+
+/* Custom hover effects */
+.product-card:hover .product-image {
+  transform: scale(1.1);
+}
+
+.product-card:hover .quick-add-btn {
+  transform: translateY(0);
+}
+
+/* Auth page gradient */
+.auth-gradient {
+  background: linear-gradient(135deg, #121212 0%, #1c1c1c 50%, #2a1f0a 100%);
+}
+
+.dark .auth-gradient {
+  background: linear-gradient(135deg, #0a0a0a 0%, #121212 50%, #1a1505 100%);
+}
+
+/* Input focus effects */
+.auth-input:focus {
+  box-shadow: 0 0 0 3px rgba(242, 185, 13, 0.2);
+}
